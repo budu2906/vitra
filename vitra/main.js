@@ -24,7 +24,7 @@ const promptFn = () => {
         extraValue = fullAmount - (box * parsedValue); // 0.5
         lastVal = extraValue / oneInBox;
         count = 0;
-        while (extraValue > count) {
+        while (extraValue >= count) {
             count += oneInBox;
         }
 
