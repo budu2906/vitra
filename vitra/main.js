@@ -21,7 +21,9 @@ const promptFn = () => {
         finalNum = fullAmount;
     } else if (!firstInt) {
         let parsedValue = parseInt(value);
-        extraValue = fullAmount - (box * parsedValue); // 0.5
+	const z = fullAmount - (box * parsedValue)
+        extraValue = z.toFixed('2')
+	console.log(extraValue)
 	let t = extraValue / oneInBox
         lastVal = t.toFixed('2')
         count = 0;
