@@ -40,3 +40,14 @@ const promptFn = () => {
     // Update the text content of the <p> element with the calculated finalNum
     pText.textContent = finalNum;
 };
+
+const pila = document.getElementById('pila')
+const firstInput = document.getElementById('inputOne')
+const secondInput = document.getElementById('inputTwo')
+const totalSumFn = () =>{
+	
+	const totalSum = (firstInput.value /100) * (secondInput.value/100)
+	pila.textContent = totalSum.toFixed('2')
+	
+
+} 
