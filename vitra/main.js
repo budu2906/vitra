@@ -22,13 +22,17 @@ const promptFn = () => {
     } else if (!firstInt) {
         let parsedValue = parseInt(value);
         extraValue = fullAmount - (box * parsedValue); // 0.5
-        lastVal = extraValue / oneInBox;
+	let t = extraValue / oneInBox
+        lastVal = t.toFixed('2')
         count = 0;
         while (extraValue > count) {
             count += oneInBox;
         }
 
-        finalNum = Number(count.toFixed('2')) + Number(box * parsedValue);
+        finalNum = (Number(count.toFixed('2')) + Number(box * parsedValue)).toFixed('2')
+	if(lastVal==1.00){
+	finalNum = fullAmount
+	}
     }
 
     // Update the text content of the <p> element with the calculated finalNum
