@@ -47,7 +47,7 @@ const secondInput = document.getElementById('inputTwo')
 const totalSumFn = () =>{
 	
 	const totalSum = (firstInput.value /100) * (secondInput.value/100)
-	pila.textContent = totalSum.toFixed('2')
+	pila.textContent = totalSum.toFixed('3')
 	
 
 } 
